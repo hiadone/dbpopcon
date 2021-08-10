@@ -3,7 +3,10 @@
 <?php echo element('headercontent', element('board', element('list', $view))); ?>
 <?php 
 $param =& $this->querystring;
- ?>
+
+
+$dualsonic_group = array('484','500','505','516','518','520','600','601','602','620','633');
+?>
 <div class="board mt40">
     <h3>상담 신청 리스트</h3>
     <div class="row mb20">
@@ -110,9 +113,9 @@ $param =& $this->querystring;
                     <th>매체코드</th>
                     <th class="mlh_gender">성별</th>
                     <th>신청일시</th>
-                    <?php echo element('post_id',element('post',$view)) ==="484" || element('post_id',element('post',$view)) ==="500" || element('post_id',element('post',$view)) ==="505" || element('post_id',element('post',$view)) ==="516" || element('post_id',element('post',$view)) ==="518" || element('post_id',element('post',$view)) ==="520" || element('post_id',element('post',$view)) ==="600" || element('post_id',element('post',$view)) ==="601" || element('post_id',element('post',$view)) ==="602" || element('post_id',element('post',$view)) ==="620"? '<th>랜탈문의</th>' : '';?>
+                    <?php echo in_array(element('post_id',element('post',$view)),$dualsonic_group) ? '<th>랜탈문의</th>' : '';?>
 
-                    <th class="per20"><?php echo element('post_id',element('post',$view)) ==="484" || element('post_id',element('post',$view)) ==="500" || element('post_id',element('post',$view)) ==="505" || element('post_id',element('post',$view)) ==="520" || element('post_id',element('post',$view)) ==="518" || element('post_id',element('post',$view)) ==="600" || element('post_id',element('post',$view)) ==="601" || element('post_id',element('post',$view)) ==="602" || element('post_id',element('post',$view)) ==="620" ? '통화가능시간' : '문의사항';?></th>
+                    <th class="per20"><?php echo in_array(element('post_id',element('post',$view)),$dualsonic_group) ? '통화가능시간' : '문의사항';?></th>
                     <th>상태</th>
                     <th>사유</th>
                    
@@ -143,7 +146,7 @@ $param =& $this->querystring;
                     <td><?php echo element('multi_code', $result)?></td>                    
                     <td class="mlh_gender"><?php echo element('mlh_gender', $result) === '2' ? '남성' : '여성'; ?></td>
                     <td><?php echo element('display_datetime', $result) ?></td>
-                    <?php echo element('post_id',element('post',$view)) ==="484" || element('post_id',element('post',$view)) ==="500"|| element('post_id',element('post',$view)) ==="505" || element('post_id',element('post',$view)) ==="516" || element('post_id',element('post',$view)) ==="518" || element('post_id',element('post',$view)) ==="520" || element('post_id',element('post',$view)) ==="600" || element('post_id',element('post',$view)) ==="601" || element('post_id',element('post',$view)) ==="602" || element('post_id',element('post',$view)) ==="620" ? '<td>'.element('mlh_val1', $result).'</td>' : '';?>
+                    <?php echo in_array(element('post_id',element('post',$view)),$dualsonic_group) ? '<td>'.element('mlh_val1', $result).'</td>' : '';?>
                     <td><?php echo html_escape(element('mlh_text', $result)) ?></td>
                     <!-- <td><a href="<?php echo goto_url(element('mlh_referer', $result)); ?>" target="_blank"><?php echo element('mlh_referer', $result); ?></a></td> -->
                     <td><a href="javascript:post_action_media('media_status_update', '<?php echo element('mlh_id', $result);?>','<?php echo element('brd_key',element('board',$view))?>', '<?php echo element('mlh_status', $result) ==='1' ? '2':'1';?>');" class="btn <?php echo element('mlh_status', $result) ==='1' ? 'btn-success':'btn-danger';?> btn-xs"><?php echo element('mlh_status', $result) === '1' ? '유효' : '무효'; ?></a></td>

@@ -251,7 +251,9 @@ class Media_multiple extends CB_Controller
             
             $view['view']['mlh_mobileno'] = $this->input->post('mlh_mobileno',null,'');
             
-            if(element('post_id', $post) === '484' || element('post_id', $post) === '500' || element('post_id', $post) === '505'|| element('post_id', $post) === '516' || element('post_id', $post) === '518' || element('post_id', $post) === '520' || element('post_id', $post) === '600' || element('post_id', $post) === '601' || element('post_id', $post) === '602' || element('post_id', $post) === '620'){
+
+            $dualsonic_mail_send = array('484','500','505','516','518','520','600','601','602','620','633');
+            if(in_array(element('post_id',$post),$dualsonic_mail_send)){
                 $this->email->clear(true);
                 $this->email->from($this->cbconfig->item('webmaster_email'), '하이애드DB');
                 $this->email->to('webmaster@jionmeditech.com');
