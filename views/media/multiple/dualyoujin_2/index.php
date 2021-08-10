@@ -900,7 +900,6 @@ $this->managelayout->add_css("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1
         <div class="img_box"><img src="<?=$AD_DIR?>/images/u1_1.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
         <div class="img_box"><img src="<?=$AD_DIR?>/images/u1.gif?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
         
-        <div class="img_box"><img src="<?=$AD_DIR?>/images/d_event.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
         
         <!-- <div class="img_box"><img src="<?=$AD_DIR?>/images/du_1_1.jpg" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div> -->
         <section class="inDB">
