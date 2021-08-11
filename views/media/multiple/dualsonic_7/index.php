@@ -626,6 +626,49 @@ img { max-width:100%; vertical-align: bottom; border:0; }
     color: #000;
 }
 
+
+.sect_treatment_principle {
+    background-color: #000;
+}
+
+
+.sect_treatment_principle .treatment_step_list {
+    width: 100%;
+    
+    margin: 0 auto;
+}
+
+
+.sect_treatment_principle .treatment_step_box:not(:last-child) {
+    float: left;
+    font-size: 0;
+    width: 49.5%;
+}
+.sect_treatment_principle .treatment_step_box:last-child {
+    float: right;
+    font-size: 0;
+    width: 49.5%;
+}
+
+
+
+@media screen and (max-width: 480px) { 
+    
+    .sect_treatment_principle .treatment_step_box:not(:last-child) {
+        width: 100%;
+        margin-bottom: 2px;
+    }
+    .sect_treatment_principle .treatment_step_box:last-child {
+        width: 100%;
+    }
+    
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both; 
+}
     </style>
     <style>
     .alert 
@@ -855,9 +898,21 @@ img { max-width:100%; vertical-align: bottom; border:0; }
             </div>
         </div> -->
         <div class="img_box"><img src="<?=$AD_DIR?>/images/df_9_1.jpg" alt="프로페셔널 vs 럭셔리" class="img"></div>
-        <div class="img_box"><img src="<?=$AD_DIR?>/images/df_9.gif" alt="프로페셔널 vs 럭셔리" class="img"></div>
-        
-        <div class="img_box"><img src="<?=$AD_DIR?>/images/df_10.jpg?u=<?php echo date('Ymd') ?>" alt="듀얼소닉 실제사용자 후기" class="img"></div>
+
+        <div class="sect_treatment_principle">             
+            <ul class="treatment_step_list clearfix">
+                <li class="treatment_step_box fadein_ani_ready fadein_ani">
+                    <img src="<?=$AD_DIR?>/images/df_9_1.gif" alt="step1 집속형 초음파 에너지" class="img img_pc">
+                    
+                </li>
+                <li class="treatment_step_box fadein_ani_ready fadein_ani">
+                    <img src="<?=$AD_DIR?>/images/df_9_2.gif" alt="step2 열작용으로 응고존 형성" class="img img_pc">
+                    
+                </li>
+                
+            </ul>
+         </div>
+        <div class="img_box" style="clear:both;"><img src="<?=$AD_DIR?>/images/df_10.jpg?u=<?php echo date('Ymd') ?>" alt="듀얼소닉 실제사용자 후기" class="img"></div>
 
         <!-- gif04 -->
         <!-- <div class="gif04">
