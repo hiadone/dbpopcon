@@ -749,6 +749,23 @@ $this->managelayout->add_css("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1
                    <!-- END Criteo 홈페이지 태그 -->
 
                 <?php } ?>
+            <?php } else{ ?>
+                <!-- Criteo 로더 파일 -->
+                <script type="text/javascript" src="//dynamic.criteo.com/js/ld/ld.js?a=73591" async="true"></script>
+                <!-- END Criteo 로더 파일 -->                
+
+                <!-- Criteo 홈페이지 태그 -->
+                <script type="text/javascript">
+                window.criteo_q = window.criteo_q || [];
+                var deviceType = /iPad/.test(navigator.userAgent) ? "t" : /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : "d";
+                window.criteo_q.push(
+                 { event: "setAccount", account: 73591},
+                 { event: "setEmail", email: "" },
+                 { event: "setZipcode", zipcode: "" },
+                 { event: "setSiteType", type: deviceType},
+                 { event: "viewHome"});
+                </script>
+                <!-- END Criteo 홈페이지 태그 -->
             <?php } ?>   
 
 

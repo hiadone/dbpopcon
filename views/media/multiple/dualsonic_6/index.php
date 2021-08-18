@@ -1,6 +1,10 @@
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/preloader.min.css'); ?>" />
-<?php
 
+<?php
+    
+    $this->managelayout->add_meta('<meta name="viewport" content="width=device-width, initial-scale=1.0">'); 
+
+    $this->managelayout->add_css(base_url('assets/css/preloader.min.css')); 
+    $this->managelayout->add_css("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css"); 
 // $this->managelayout->add_js('https://www.leadtracker.live/static/js/fixel.js'); 
     $AD_DIR  = element('view_skin_url', $layout);
     $jid=0;
@@ -11,13 +15,9 @@
     if(!empty($_GET['at'])) $at=$_GET['at'];
 
 ?>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>듀얼소닉</title>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+
     <style>
         * {
             padding: 0;
@@ -677,6 +677,23 @@
         <script type="text/javascript">
               kakaoPixel('7431202530174679533').pageView();
         </script>
+
+        <!-- Criteo 로더 파일 -->
+        <script type="text/javascript" src="//dynamic.criteo.com/js/ld/ld.js?a=73591" async="true"></script>
+        <!-- END Criteo 로더 파일 -->                
+
+        <!-- Criteo 홈페이지 태그 -->
+        <script type="text/javascript">
+        window.criteo_q = window.criteo_q || [];
+        var deviceType = /iPad/.test(navigator.userAgent) ? "t" : /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : "d";
+        window.criteo_q.push(
+         { event: "setAccount", account: 73591},
+         { event: "setEmail", email: "" },
+         { event: "setZipcode", zipcode: "" },
+         { event: "setSiteType", type: deviceType},
+         { event: "viewHome"});
+        </script>
+        <!-- END Criteo 홈페이지 태그 -->
 </head>
 <body>
     <div class="wrap">
