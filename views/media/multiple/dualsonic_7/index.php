@@ -886,6 +886,7 @@ img { max-width:100%; vertical-align: bottom; border:0; }
             <?php echo form_close(); ?>
         </section>
 
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/event_11.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
         <div class="img_box"><img src="<?=$AD_DIR?>/images/df_3.jpg" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
         <div class="img_box" style="margin-bottom:0px;"><img src="<?=$AD_DIR?>/images/df_4_1.jpg?u=<?php echo date('Ymd') ?>" alt="임상 시험" class="img"></div>
         <div class="img_box" style="margin-bottom:0px;"><img src="<?=$AD_DIR?>/images/df_4.gif?u=<?php echo date('Ymd') ?>" alt="임상 시험" class="img"></div>
@@ -947,7 +948,7 @@ img { max-width:100%; vertical-align: bottom; border:0; }
         
         
         
-        <div class="img_box"><img src="<?=$AD_DIR?>/images/df_11.jpg" alt="듀얼소닉 수상 내역" class="img"></div>   
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/df_11.jpg?u=<?php echo date('Ymd') ?>" alt="듀얼소닉 수상 내역" class="img"></div>   
         <div class="img_box"><img src="<?=$AD_DIR?>/images/df_12.jpg?u=<?php echo date('Ymd') ?>" alt="듀얼소닉 수상 내역" class="img"></div>             
         <!-- <div class="img_box"><img src="<?=$AD_DIR?>/images/du_10.jpg" alt="듀얼소닉 수상 내역" class="img"></div>         -->
 
