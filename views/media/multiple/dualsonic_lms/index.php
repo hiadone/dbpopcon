@@ -811,7 +811,7 @@ img { max-width:100%; vertical-align: bottom; border:0; }
         </div>
         <div class="img_box"><img src="<?=$AD_DIR?>/images/df_1.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
         
-        <div class="img_box"><img src="<?=$AD_DIR?>/images/df_2_.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/df_2_1.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
         <!-- <div class="img_box"><img src="<?=$AD_DIR?>/images/d_event.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div> -->
         <!-- <div class="img_box"><img src="<?=$AD_DIR?>/images/du_1_1.jpg" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div> -->
 
