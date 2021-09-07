@@ -708,7 +708,7 @@ $this->managelayout->add_css("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1
 
                 <?php } ?>
             <?php } ?>   
-        <?php if(strtolower(element('multi_code',$view))==='criteo' || strtolower(element('multi_code',$view))==='criteo_m' || strtolower(element('multi_code',$view))==='criteo_adap'){ ?>
+        <?php if(strtolower(element('multi_code',$view))==='criteo' || strtolower(element('multi_code',$view))==='criteo2' || strtolower(element('multi_code',$view))==='criteo_m' || strtolower(element('multi_code',$view))==='criteo_adap'){ ?>
 
                
                 <!-- Criteo 로더 파일 -->
