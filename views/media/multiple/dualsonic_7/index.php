@@ -777,28 +777,73 @@ img { max-width:100%; vertical-align: bottom; border:0; }
 
             <?php } ?>
         <?php } ?>    
-                 
+    
+    <?php if(strtolower(element('multi_code',$view))==='Criteo2' ){ ?>
+
+           
+            <!-- Criteo 로더 파일 -->
+            <script type="text/javascript" src="//dynamic.criteo.com/js/ld/ld.js?a=73591" async="true"></script>
+            <!-- END Criteo 로더 파일 -->
+
+            <?php if($this->session->flashdata('mlh_id')){ ?>
+
+            
+            <script type="text/javascript">
+            window.criteo_q = window.criteo_q || [];
+            var deviceType = /iPad/.test(navigator.userAgent) ? "t" : /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : "d";
+            window.criteo_q.push(
+             { event: "setAccount", account: 73591}, // 이 라인은 업데이트하면 안됩니다
+             { event: "setEmail", email: "" }, // 유저가 로그인이 안되 있는 경우 빈 문자열을 전달
+             { event: "setZipcode", zipcode: "" },
+             { event: "setSiteType", type: deviceType},
+             { event: "trackTransaction", id: <?php echo $this->session->flashdata('mlh_id') ? $this->session->flashdata('mlh_id'):0 ?>, item: [
+                {id: "1", price: 1, quantity: 1 }
+             ]}
+            );
+            </script> 
+      
+        
+
+            <?php } else{ ?>
+               <!-- Criteo 홈페이지 태그 -->
+               <script type="text/javascript">
+               window.criteo_q = window.criteo_q || [];
+               var deviceType = /iPad/.test(navigator.userAgent) ? "t" : /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : "d";
+               window.criteo_q.push(
+                { event: "setAccount", account: 73591},
+                { event: "setEmail", email: "" },
+                { event: "setZipcode", zipcode: "" },
+                { event: "setSiteType", type: deviceType},
+                { event: "viewHome"});
+               </script>
+               <!-- END Criteo 홈페이지 태그 -->
+
+            <?php } ?>
+        <?php } else{ ?>
+            <!-- Criteo 로더 파일 -->
+            <script type="text/javascript" src="//dynamic.criteo.com/js/ld/ld.js?a=73591" async="true"></script>
+            <!-- END Criteo 로더 파일 -->                
+
+            <!-- Criteo 홈페이지 태그 -->
+            <script type="text/javascript">
+            window.criteo_q = window.criteo_q || [];
+            var deviceType = /iPad/.test(navigator.userAgent) ? "t" : /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : "d";
+            window.criteo_q.push(
+             { event: "setAccount", account: 73591},
+             { event: "setEmail", email: "" },
+             { event: "setZipcode", zipcode: "" },
+             { event: "setSiteType", type: deviceType},
+             { event: "viewHome"});
+            </script>
+            <!-- END Criteo 홈페이지 태그 -->
+        <?php } ?>   
+
         <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
         <script type="text/javascript">
               kakaoPixel('7431202530174679533').pageView();
         </script>
 
-        <!-- Criteo 로더 파일 -->
-        <script type="text/javascript" src="//dynamic.criteo.com/js/ld/ld.js?a=73591" async="true"></script>
-        <!-- END Criteo 로더 파일 -->                
-
-        <!-- Criteo 홈페이지 태그 -->
-        <script type="text/javascript">
-        window.criteo_q = window.criteo_q || [];
-        var deviceType = /iPad/.test(navigator.userAgent) ? "t" : /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : "d";
-        window.criteo_q.push(
-         { event: "setAccount", account: 73591},
-         { event: "setEmail", email: "" },
-         { event: "setZipcode", zipcode: "" },
-         { event: "setSiteType", type: deviceType},
-         { event: "viewHome"});
-        </script>
-        <!-- END Criteo 홈페이지 태그 -->
+       
 </head>
 <body>
     <div class="wrap">
