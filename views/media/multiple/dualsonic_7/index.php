@@ -778,7 +778,7 @@ img { max-width:100%; vertical-align: bottom; border:0; }
             <?php } ?>
         <?php } ?>    
     
-    <?php if(strtolower(element('multi_code',$view))==='Criteo2' ){ ?>
+    <?php if(strtolower(element('multi_code',$view))==='Criteo_N' ){ ?>
 
            
             <!-- Criteo 로더 파일 -->
